@@ -60,11 +60,11 @@ const Page = ({
 Page.propTypes = {
   customScreen: PropTypes.element,
   isLight: PropTypes.bool.isRequired,
-  image: PropTypes.element.isRequired,
+  image: PropTypes.element,
   containerStyles: ViewPropTypes.style,
   imageContainerStyles: ViewPropTypes.style,
-  title: PropTypes.oneOfType([PropTypes.string, PropTypes.element]).isRequired,
-  subtitle: PropTypes.oneOfType([PropTypes.string, PropTypes.element]).isRequired,
+  title: PropTypes.oneOfType([PropTypes.string, PropTypes.element]),
+  subtitle: PropTypes.oneOfType([PropTypes.string, PropTypes.element]),
   allowFontScaling: PropTypes.bool,
   titleStyles: Text.propTypes.style,
   subTitleStyles: Text.propTypes.style,
@@ -79,6 +79,9 @@ Page.defaultProps = {
   allowFontScaling: true,
   titleStyles: null,
   subTitleStyles: null,
+  title: null,
+  image: null,
+  subtitle: null,
 }
 
 const { width, height } = Dimensions.get('window')
